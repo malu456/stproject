@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+   <body style="background-color: pink;">
+<center><h2 style="font-size:30px">Form</h2></center>
+<form action="Form" method="post">
+    {% csrf_token %}
+     <label for="name">Name</label>
+    <input type="text" name="Name"><br>
+     <label for="DOB">DOB</label>
+    <input type="date" name="DOB" ><br>
+     <label for="Age">Age</label>
+    <input type="text" name="age" ><br>
+     <label for="Gender">gender</label><br>
+    <input type="radio" name="gender" value="male" > Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+     <label for="phonenumber">phonenumber</label>
+    <input type="text" name="phnum"><br>
+     <label for="email">email</label>
+    <input type="email" name="email"><br>
+     <label for="address">Address</label>
+        <input type="text" name="address"><br>
+    <label for="Department">Department:</label>
+  <select name="computer science" id="computerscience">
+    <optgroup label="computer science">
+      <option value="select">select</option>
+      <option value="Engineering">Engineering</option>
+        <option value="IT">Information technology</option>
+        <option value="BCA">BCA</option>
+
+    </optgroup>
+    <optgroup label="Commerce">
+      <option value="BBA">BBA</option>
+      <option value="BCOM">BCOM</option>
+         <option value="CA">CA</option>
+    </optgroup>
+       <optgroup label="Biomaths">
+      <option value="Engg">Engg</option>
+      <option value="medicine">medicine</option>
+         <option value="bsc">bsc</option>
+    </optgroup>
+       <optgroup label="Bio-computer">
+      <option value="bca">bca</option>
+      <option value="bsc">bsc</option>
+         <option value="bba">bba</option>
+    </optgroup>
+       <optgroup label="humanities">
+      <option value="journalism">journalism</option>
+      <option value="sociology">sociology</option>
+         <option value="bsc">bsc</option>
+    </optgroup>
+  </select>
+  <br><br>
+     <label for="purpose">purpose</label>
+    <select name="purpose" id="purpose">
+        <option
+            value="select">select</option>
+        <option
+            value="enquiry">enquiry</option>
+         <option
+            value="place order">placeorder</option>
+         <option
+            value="return">return</option>
+    </select><br>
+    <label for="materials provided">Materials provided :</label>
+        <input type="checkbox" name="material provided" value="debit note book"> debit note book
+         <input type="checkbox" name="material provided" value="pen"> pen
+          <input type="checkbox" name="material provided" value="exam papers"> exam paper
+    <br>
+     <a href="{% url 'store:msg' %}"><button type="submit" name="submit">submit</a><br>
+    <a href="{% url 'store:demo' %}"><button type="submit" name="logout">logout</a>
+</form>
+</body>
+</html>
